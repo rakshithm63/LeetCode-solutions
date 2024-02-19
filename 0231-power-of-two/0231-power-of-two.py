@@ -1,10 +1,8 @@
-class Solution(object):
-    def isPowerOfTwo(self, n):
-        if n<=0:
-            return False
-        if n==1:
-            return True
-        while (n%2==0):
-            n /= 2
-        return n==1
-        
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        for i in range(0,31):
+            if n==2**i:
+                return True
+            
+        return False
+
